@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PumpUp · Gestión IoT para gimnasios</title>
+  <meta name="description" content="PumpUp: Soluciones IoT y software para modernizar gimnasios. Para gerentes, asesores y usuarios que entrenan." />
+  <meta name="theme-color" content="#f59e0b" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="images/Logo.png" alt="PumpUp logo" class="logo" />
+        <span class="brand-text">PumpUp</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a class="nav-link" href="#/">Inicio</a>
+        <a class="nav-link" href="#/managers">Gerentes</a>
+        <a class="nav-link" href="#/members">Entrenados</a>
+        <a class="nav-link" href="#contact">Contacto</a>
+        <button class="btn btn-ghost" id="demoBtn">Solicitar demo</button>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div id="views">
+      <section id="landing" class="app-view active">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-text">
+          <h1>PumpUp — Gestión inteligente para gimnasios</h1>
+          <p class="lead">Control de accesos, monitoreo de equipos y analíticas en tiempo real para gerentes y una experiencia personalizada para quienes entrenan.</p>
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <div class="stat-value" data-target="320">0</div>
+              <div class="stat-label">Gimnasios apoyados</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" data-target="12500">0</div>
+              <div class="stat-label">Usuarios activos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" data-target="4800">0</div>
+              <div class="stat-label">Horas administrativas ahorradas</div>
+            </div>
+          </div>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contact">Prueba gratis</a>
+            <button class="btn btn-outline" id="scrollFeatures">Ver características</button>
+          </div>
+          <ul class="highlights">
+            <li>Reducción del trabajo administrativo</li>
+            <li>Control de aforo y trazabilidad</li>
+            <li>App para miembros con métricas</li>
+          </ul>
+        </div>
+  <div class="hero-art">
+          <!-- simple illustrative SVG -->
+          <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#f59e0b"/>
+                <stop offset="1" stop-color="#f97316"/>
+              </linearGradient>
+            </defs>
+            <rect rx="16" width="100%" height="100%" fill="#0f172a"/>
+            <g transform="translate(40 30)">
+              <rect x="0" y="10" width="260" height="140" rx="12" fill="#071029" stroke="#f97316"/>
+              <circle cx="200" cy="180" r="60" fill="url(#g)" opacity="0.95"/>
+              <rect x="20" y="30" width="120" height="12" rx="6" fill="#f97316" />
+              <rect x="20" y="56" width="200" height="10" rx="5" fill="#ffffff22" />
+              <rect x="20" y="78" width="160" height="10" rx="5" fill="#ffffff22" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section bg-dashboard">
+      <div class="container">
+        <h2 class="section-title">Panel de beneficios por perfil</h2>
+        <p class="muted">Selecciona tu rol para ver las funcionalidades y beneficios hechos a la medida.</p>
+
+        <div class="dashboard">
+          <div class="dashboard-tabs" role="tablist" aria-label="Vistas por segmento">
+            <button class="tab active" data-target="managers" role="tab" aria-selected="true">Gerentes & Asesores</button>
+            <button class="tab" data-target="members" role="tab" aria-selected="false">Personas que entrenan</button>
+          </div>
+
+          <div class="dashboard-panels">
+            <div id="managers" class="dashboard-panel reveal show" role="tabpanel">
+              <div class="panel-grid">
+                <div class="panel-main">
+                  <h3>Visión para gerentes y asesores</h3>
+                  <p>Herramientas para optimizar operación, reducir costos y convertir datos en decisiones accionables.</p>
+                  <ul class="benefits">
+                    <li><strong>Dashboard central:</strong> aforo, uso de equipos y alertas en un solo lugar.</li>
+                    <li><strong>Reportes automatizados:</strong> exporta CSV y planifica acciones semanales.</li>
+                    <li><strong>Mantenimiento predictivo:</strong> reduce tiempos muertos con alertas de uso inusual.</li>
+                  </ul>
+                  </br>
+                  <a class="btn btn-primary" href="#contact">Solicitar demo para mi gimnasio</a>
+                </div>
+                <aside class="panel-aside image-slot">
+                  <!-- placeholder for manager illustration -->
+                </aside>
+              </div>
+            </div>
+
+            <div id="members" class="dashboard-panel reveal" role="tabpanel" hidden>
+              <div class="panel-grid">
+                <div class="panel-main">
+                  <h3>Visión para quien entrena</h3>
+                  <p>Una experiencia que te ayuda a medir, mejorar y disfrutar tu rutina con seguridad y gamificación.</p>
+                  <ul class="benefits">
+                    <li><strong>Métricas personales:</strong> historial de visitas, calorías y progreso por entrenamiento.</li>
+                    <li><strong>Reservas y aforo:</strong> reserva máquinas o clases y evita horas pico.</li>
+                    <li><strong>Logros y retos:</strong> mantén la motivación con badges y retos mensuales.</li>
+                  </ul>
+                  </br>
+                  <a class="btn btn-primary" href="#contact">Quiero la app</a>
+                </div>
+                <aside class="panel-aside image-slot">
+                  <!-- placeholder for member illustration -->
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Qué ofrece PumpUp</h2>
+        <div class="grid-3">
+          <article class="card">
+            <div class="feature-media image-slot" aria-hidden="true"></div>
+            <h3>Control de accesos</h3>
+            <p>Biometría, NFC o membresías digitales con registro automático y trazabilidad de entradas y salidas.</p>
+          </article>
+          <article class="card">
+            <div class="feature-media image-slot" aria-hidden="true"></div>
+            <h3>Monitoreo de equipos</h3>
+            <p>Sensores IoT que reportan uso de máquinas, detectan sobrecarga y optimizan mantenimiento.</p>
+          </article>
+          <article class="card">
+            <div class="feature-media image-slot" aria-hidden="true"></div>
+            <h3>Analytics & dashboards</h3>
+            <p>Informes en tiempo real para decisiones operativas: aforo, horarios pico y retención de miembros.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="segments" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Pensado para dos audiencias</h2>
+        <div class="segments-grid">
+          <div class="segment">
+            <div class="segment-media image-slot" aria-hidden="true"></div>
+            <h3>Gerentes y asesores de gimnasio</h3>
+            <p>Herramientas para gestionar operaciones, reducir trabajo manual y obtener insights accionables. Ideal para dueños, gerentes y consultores que buscan eficiencia y crecimiento.</p>
+            <ul>
+              <li>Dashboard administrativo</li>
+              <li>Reportes personalizables</li>
+              <li>Instalación modular y soporte en español</li>
+            </ul>
+            <a class="btn btn-small" href="#contact">Solicitar demo</a>
+          </div>
+          <div class="segment">
+            <div class="segment-media image-slot" aria-hidden="true"></div>
+            <h3>Personas que entrenan</h3>
+            <p>Una app sencilla que muestra tu historial de visitas, métricas de entrenamiento y recomendaciones para mejorar tu rendimiento y seguridad.</p>
+            <ul>
+              <li>Historial y métricas personales</li>
+              <li>Alertas de uso seguro de equipos</li>
+              <li>Gamificación y logros</li>
+            </ul>
+            <a class="btn btn-small" href="#contact">Quiero la app</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Contacto y solicitud de demo</h2>
+          <p>Déjanos tus datos y te contactamos para una demostración personalizada.</p>
+          <form id="contactForm" class="form">
+            <label>Nombre
+              <input type="text" name="name" id="name" placeholder="Tu nombre" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+            </label>
+            <label>¿Eres?
+              <select id="role" name="role">
+                <option value="gerente">Gerente / Asesor</option>
+                <option value="deportista">Persona que entrena</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Solicitar demo</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>¿Prefieres hablar?</h3>
+          <p>Email: hola@pumpup.example</p>
+          <p>Tel: +51 9XX XXX XXX</p>
+        </div>
+      </div>
+        </section>
+      </section>
+
+      <!-- Managers full view (SPA route) -->
+      <section id="managers-view" class="app-view" hidden>
+        <div class="container">
+
+          <a href="#/" class="btn btn-ghost back-link">← Volver</a>
+
+          <h1 class="section-title">PumpUp para Gerentes y Asesores</h1>
+          <p class="muted">Optimiza operaciones, reduce pérdidas y toma decisiones con datos reales.</p>
+          <div class="grid-3">
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Dashboard Unificado</h3>
+              <p>Visualiza aforo, uso de máquinas y alertas en tiempo real desde una sola pantalla.</p>
+            </article>
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Reportes Automáticos</h3>
+              <p>Exporta CSV y planifica acciones basadas en datos semanales o mensuales.</p>
+            </article>
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Mantenimiento Predictivo</h3>
+              <p>Recibe alertas antes de fallos y programa mantenimientos que reduzcan paradas.</p>
+            </article>
+          </div>
+          <section class="section">
+            <h2 class="section-title">Beneficios clave</h2>
+            <ul class="benefits">
+              <li>Menos tiempo administrativo</li>
+              <li>Mejor retención de miembros</li>
+              <li>Decisiones basadas en datos</li>
+            </ul>
+          </section>
+          <a class="btn btn-primary" href="#contact">Solicitar demo para mi gimnasio</a>
+        </div>
+      </section>
+
+      <!-- Members full view (SPA route) -->
+      <section id="members-view" class="app-view" hidden>
+        <div class="container">
+            
+          <a href="#/" class="btn btn-ghost back-link">← Volver</a>
+          <h1 class="section-title">PumpUp para Personas que entrenan</h1>
+          <p class="muted">Sigue tu progreso, evita horas pico y disfruta retos que te mantengan motivado.</p>
+          <div class="grid-3">
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Métricas personales</h3>
+              <p>Historial de visitas, calorías, rendimiento y progreso por rutina.</p>
+            </article>
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Reservas y aforo</h3>
+              <p>Reserva máquinas o clases y evita las horas pico más concurridas.</p>
+            </article>
+            <article class="card reveal">
+              <div class="feature-media image-slot"></div>
+              <h3>Gamificación</h3>
+              <p>Retos y badges para mantener la motivación y la comunidad.</p>
+            </article>
+          </div>
+          <section class="section">
+            <h2 class="section-title">Beneficios para ti</h2>
+            <ul class="benefits">
+              <li>Entrena con datos</li>
+              <li>Planifica mejor tu tiempo</li>
+              <li>Comparte logros y compite sanamente</li>
+            </ul>
+          </section>
+          <a class="btn btn-primary" href="#contact">Quiero la app</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <button id="backTop" class="back-top" aria-label="Volver arriba">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© PumpUp 2025 · Momentum · Soluciones IoT para gimnasios</p>
+      <nav class="footer-nav">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=1.1"></script>
+</body>
+</html>
