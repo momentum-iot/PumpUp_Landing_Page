@@ -287,3 +287,149 @@ function setHeaderHeightCSS(){
   const main = document.getElementById('main-content');
   if(main) main.style.paddingTop = `calc(${h}px + 8px)`;
 }
+
+const I18N = {
+  es: {
+    "nav.home": "Inicio",
+    "nav.managers": "Gerentes",
+    "nav.members": "Entrenados",
+    "nav.contact": "Contacto",
+    "cta.requestDemo": "Solicitar demo",
+    "cta.freeTrial": "Prueba gratis",
+    "cta.viewFeatures": "Ver características",
+    "cta.getStarted": "Comenzar",
+    "cta.wantApp": "Quiero la app",
+    "cta.contactSales": "Contactar ventas",
+
+    "hero.title": "PumpUp — Gestión inteligente para gimnasios",
+    "hero.lead": "Control de accesos, monitoreo de equipos y analíticas en tiempo real para gerentes y una experiencia personalizada para quienes entrenan.",
+
+    "dashboard.title": "Panel de beneficios por perfil",
+    "dashboard.subtitle": "Selecciona tu rol para ver las funcionalidades y beneficios hechos a la medida",
+    "tabs.managers": "Gerentes & Asesores",
+    "tabs.members": "Personas que entrenan",
+
+    "features.title": "Qué ofrece PumpUp",
+    "features.accessTitle": "Control de accesos",
+    "features.accessDesc": "Biometría, NFC o membresías digitales con registro automático y trazabilidad de entradas y salidas.",
+    "features.monitorTitle": "Monitoreo de equipos",
+    "features.monitorDesc": "Sensores IoT que reportan uso de máquinas, detectan sobrecarga y optimizan mantenimiento.",
+    "features.analyticsTitle": "Analytics & dashboards",
+    "features.analyticsDesc": "Informes en tiempo real para decisiones operativas: aforo, horarios pico y retención de miembros.",
+
+    "segments.title": "Pensado para dos audiencias",
+    "segments.mgrTitle": "Gerentes y asesores de gimnasio",
+    "segments.mgrDesc": "Herramientas para gestionar operaciones, reducir trabajo manual y obtener insights accionables. Ideal para dueños, gerentes y consultores que buscan eficiencia y crecimiento.",
+    "segments.memTitle": "Personas que entrenan",
+    "segments.memDesc": "Una app sencilla que muestra tu historial de visitas, métricas de entrenamiento y recomendaciones para mejorar tu rendimiento y seguridad.",
+
+    "plans.title": "Planes",
+    "plans.subtitle": "Elige el plan que mejor se adapte a las necesidades de tu gimnasio.",
+    "plans.basic.title": "Básico",
+    "plans.basic.price": "$29/mes",
+    "plans.basic.item1": "Control de accesos biométrico y NFC",
+    "plans.basic.item2": "Registro automático de entradas y salidas",
+    "plans.basic.item3": "Dashboard de ocupación en tiempo real",
+    "plans.basic.item4": "Soporte estándar por correo",
+    "plans.pro.title": "Pro",
+    "plans.pro.price": "$59/mes",
+    "plans.pro.item1": "Todo lo del plan Básico",
+    "plans.pro.item2": "Monitoreo IoT de equipos y alertas",
+    "plans.pro.item3": "Reportes personalizados y exportación CSV",
+    "plans.pro.item4": "Soporte prioritario y onboarding guiado",
+
+    "contact.title": "Contacto y solicitud de demo",
+    "contact.subtitle": "Déjanos tus datos y te contactamos para una demostración personalizada.",
+    "contact.nameLabel": "Nombre",
+    "contact.emailLabel": "Email",
+    "contact.roleLabel": "¿Eres?",
+    "contact.role.manager": "Gerente / Asesor",
+    "contact.role.athlete": "Persona que entrena",
+    "contact.messageLabel": "Mensaje",
+    "contact.success": "¡Enviado! Te contactaremos pronto.",
+    "contact.error": "No pudimos enviar tu solicitud. Inténtalo nuevamente.",
+    "contact.altTitle": "¿Prefieres hablar?"
+  },
+
+  en: {
+    "nav.home": "Home",
+    "nav.managers": "Managers",
+    "nav.members": "Members",
+    "nav.contact": "Contact",
+    "cta.requestDemo": "Request demo",
+    "cta.freeTrial": "Start free trial",
+    "cta.viewFeatures": "See features",
+    "cta.getStarted": "Get started",
+    "cta.wantApp": "I want the app",
+    "cta.contactSales": "Contact sales",
+
+    "hero.title": "PumpUp — Smart management for gyms",
+    "hero.lead": "Access control, equipment monitoring and real-time analytics for managers, with a personalized experience for people who train.",
+
+    "dashboard.title": "Benefits by profile",
+    "dashboard.subtitle": "Select your role to see tailored features and benefits",
+    "tabs.managers": "Managers & Advisors",
+    "tabs.members": "People who train",
+
+    "features.title": "What PumpUp offers",
+    "features.accessTitle": "Access control",
+    "features.accessDesc": "Biometrics, NFC or digital memberships with automatic logging and full traceability.",
+    "features.monitorTitle": "Equipment monitoring",
+    "features.monitorDesc": "IoT sensors report machine usage, detect overload and optimize maintenance.",
+    "features.analyticsTitle": "Analytics & dashboards",
+    "features.analyticsDesc": "Real-time insights for operations: occupancy, peak hours and member retention.",
+
+    "segments.title": "Designed for two audiences",
+    "segments.mgrTitle": "Gym managers and advisors",
+    "segments.mgrDesc": "Tools to streamline operations, cut manual work and get actionable insights. Ideal for owners, managers and consultants focused on efficiency and growth.",
+    "segments.memTitle": "People who train",
+    "segments.memDesc": "A simple app that shows your visit history, training metrics and recommendations to improve performance and safety.",
+
+    "plans.title": "Plans",
+    "plans.subtitle": "Choose the plan that best fits your gym’s needs.",
+    "plans.basic.title": "Basic",
+    "plans.basic.price": "$29/mo",
+    "plans.basic.item1": "Biometric and NFC access control",
+    "plans.basic.item2": "Automatic check-in and check-out logging",
+    "plans.basic.item3": "Real-time occupancy dashboard",
+    "plans.basic.item4": "Standard email support",
+    "plans.pro.title": "Pro",
+    "plans.pro.price": "$59/mo",
+    "plans.pro.item1": "Everything in Basic plan",
+    "plans.pro.item2": "IoT equipment monitoring and alerts",
+    "plans.pro.item3": "Custom reports and CSV export",
+    "plans.pro.item4": "Priority support and guided onboarding",
+
+    "contact.title": "Contact & demo request",
+    "contact.subtitle": "Leave your details and we’ll reach out for a personalized demo.",
+    "contact.nameLabel": "Name",
+    "contact.emailLabel": "Email",
+    "contact.roleLabel": "You are?",
+    "contact.role.manager": "Manager / Advisor",
+    "contact.role.athlete": "Person who trains",
+    "contact.messageLabel": "Message",
+    "contact.success": "Sent! We will contact you soon.",
+    "contact.error": "We couldn’t send your request. Please try again.",
+    "contact.altTitle": "Prefer to talk?"
+  }
+};
+
+function applyI18n(lang) {
+  const dict = I18N[lang] || I18N.es;
+  document.querySelectorAll("[data-i18n]").forEach(node => {
+    const key = node.getAttribute("data-i18n");
+    if (dict[key]) node.textContent = dict[key];
+  });
+  document.documentElement.setAttribute("lang", lang);
+  localStorage.setItem("lang", lang);
+}
+
+(function initLang() {
+  const select = document.getElementById("langSwitch");
+  const saved = localStorage.getItem("lang") || "es";
+  if (select) {
+    select.value = saved;
+    select.addEventListener("change", () => applyI18n(select.value));
+  }
+  applyI18n(saved);
+})();
