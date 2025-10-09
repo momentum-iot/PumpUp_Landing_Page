@@ -6,7 +6,6 @@ html,body{height:100%}
   --bg-2:#0E1E2B;
   --brand:#0E1E2B;
   --accent:#84C216;
-  --accent-2:#A1414A;
   --accent-dark:#84C216;
   --accent-muted:rgba(132,194,22,0.06);
   --muted:#D4D4D4;
@@ -151,7 +150,6 @@ body{font-family:'Poppins',Inter,Segoe UI,Arial,sans-serif;color:var(--muted);li
 :root {
   --base: #0E1E2B;
   --accent: #84C216;
-  --accent-2: #A1414A;
   --bg-1: #0E1E2B;
   --bg-2: #0E1E2B;
   --bg-3: #D4D4D4;
