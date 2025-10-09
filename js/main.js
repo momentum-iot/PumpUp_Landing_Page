@@ -125,16 +125,27 @@ function setupDashboardTabs(){
     if(pushState){
       history.replaceState(null,'', '#dashboard-' + targetId);
     }
+    // ensure dashboard section is visible and scrolled into view
+    const dashboardSection = document.getElementById('dashboard');
+    if(dashboardSection){
+      setTimeout(()=> dashboardSection.scrollIntoView({behavior:'smooth', block:'start'}), 80);
+    }
   }
 
   tabs.forEach(t=>t.addEventListener('click', ()=> activate(t.getAttribute('data-target'))));
 
-  // deep-link from hash e.g. #dashboard-managers
-  const h = location.hash.replace('#','');
-  if(h.startsWith('dashboard-')){
-    const target = h.replace('dashboard-','');
-    activate(target,false);
+  // deep-link from hash e.g. #dashboard-managers — also react to future hashchanges
+  function checkDashboardHash(){
+    const h = location.hash.replace('#','');
+    if(h.startsWith('dashboard-')){
+      const target = h.replace('dashboard-','');
+      activate(target,false);
+    }
   }
+  // initial check
+  checkDashboardHash();
+  // respond to subsequent hash changes
+  window.addEventListener('hashchange', checkDashboardHash);
 }
 
 // Simple hash router for SPA views
@@ -225,9 +236,20 @@ function setupUIHelpers(){
   updateActiveLink();
 
   // close mobile nav when clicking a nav-link
-  navLinks.forEach(a=> a.addEventListener('click', ()=>{
-    if(navEl.classList.contains('open')) navEl.classList.remove('open');
-  }));
+    navLinks.forEach(a=> a.addEventListener('click', (e)=>{
+      const href = a.getAttribute('href') || '';
+      // If top nav targets managers/members, open the dashboard tab in landing instead of navigating away
+      if(href === '#/managers' || href === '#/members'){
+        e.preventDefault();
+        const target = href === '#/managers' ? 'managers' : 'members';
+        // set dashboard deep-link which the router + dashboard handler will honor
+        location.hash = 'dashboard-' + target;
+        // close mobile nav
+        if(navEl.classList.contains('open')) navEl.classList.remove('open');
+        return;
+      }
+      if(navEl.classList.contains('open')) navEl.classList.remove('open');
+    }));
 
   // back-to-top click
   if(backTop) backTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
@@ -413,6 +435,43 @@ const I18N = {
     "contact.altTitle": "Prefer to talk?"
   }
 };
+
+// Dashboard specific translations (managers/members detail) - ensure keys exist
+I18N.es["dashboard.managers.heading"] = "Visión para gerentes y asesores";
+I18N.es["dashboard.managers.desc"] = "Herramientas para optimizar operación, reducir costos y convertir datos en decisiones accionables.";
+I18N.es["dashboard.managers.b1.title"] = "Dashboard central:";
+I18N.es["dashboard.managers.b1.desc"] = "Aforo, uso de equipos y alertas en un solo lugar.";
+I18N.es["dashboard.managers.b2.title"] = "Reportes automatizados:";
+I18N.es["dashboard.managers.b2.desc"] = "Exporta CSV y planifica acciones semanales.";
+I18N.es["dashboard.managers.b3.title"] = "Mantenimiento predictivo:";
+I18N.es["dashboard.managers.b3.desc"] = "Reduce tiempos muertos con alertas de uso inusual.";
+
+I18N.es["dashboard.members.heading"] = "Visión para quien entrena";
+I18N.es["dashboard.members.desc"] = "Una experiencia que te ayuda a medir, mejorar y disfrutar tu rutina con seguridad y gamificación.";
+I18N.es["dashboard.members.b1.title"] = "Métricas personales:";
+I18N.es["dashboard.members.b1.desc"] = "Historial de visitas, calorías y progreso por entrenamiento.";
+I18N.es["dashboard.members.b2.title"] = "Reservas y aforo:";
+I18N.es["dashboard.members.b2.desc"] = "Reserva máquinas o clases y evita horas pico.";
+I18N.es["dashboard.members.b3.title"] = "Logros y retos:";
+I18N.es["dashboard.members.b3.desc"] = "Mantén la motivación con badges y retos mensuales.";
+
+I18N.en["dashboard.managers.heading"] = "Vision for managers and advisors";
+I18N.en["dashboard.managers.desc"] = "Tools to optimize operations, cut costs and turn data into actionable decisions.";
+I18N.en["dashboard.managers.b1.title"] = "Central dashboard:";
+I18N.en["dashboard.managers.b1.desc"] = "Occupancy, equipment usage and alerts in a single place.";
+I18N.en["dashboard.managers.b2.title"] = "Automated reports:";
+I18N.en["dashboard.managers.b2.desc"] = "Export CSV and plan weekly actions.";
+I18N.en["dashboard.managers.b3.title"] = "Predictive maintenance:";
+I18N.en["dashboard.managers.b3.desc"] = "Reduce downtime with unusual usage alerts.";
+
+I18N.en["dashboard.members.heading"] = "Vision for people who train";
+I18N.en["dashboard.members.desc"] = "An experience that helps you measure, improve and enjoy your routine with safety and gamification.";
+I18N.en["dashboard.members.b1.title"] = "Personal metrics:";
+I18N.en["dashboard.members.b1.desc"] = "Visit history, calories and progress per workout.";
+I18N.en["dashboard.members.b2.title"] = "Reservations & occupancy:";
+I18N.en["dashboard.members.b2.desc"] = "Reserve machines or classes and avoid peak hours.";
+I18N.en["dashboard.members.b3.title"] = "Achievements & challenges:";
+I18N.en["dashboard.members.b3.desc"] = "Stay motivated with badges and monthly challenges.";
 
 function applyI18n(lang) {
   const dict = I18N[lang] || I18N.es;

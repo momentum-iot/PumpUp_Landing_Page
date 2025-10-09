@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>PumpUp · Gestión IoT para gimnasios</title>
   <meta name="description" content="PumpUp: Soluciones IoT y software para modernizar gimnasios. Para gerentes, asesores y usuarios que entrenan." />
-  <meta name="theme-color" content="#f59e0b" />
+  <meta name="theme-color" content="#84C216" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=1.1">
 </head>
@@ -22,6 +22,8 @@
         <a class="nav-link" href="#/managers" data-i18n="nav.managers">Gerentes</a>
         <a class="nav-link" href="#/members" data-i18n="nav.members">Entrenados</a>
         <a class="nav-link" href="#contact" data-i18n="nav.contact">Contacto</a>
+        </br>
+                    </br>
         <button class="btn btn-ghost" id="demoBtn" data-i18n="cta.requestDemo">Solicitar demo</button>
       </nav>
       <label class="lang-switch" for="langSwitch" aria-label="Idioma">
@@ -76,15 +78,15 @@
               <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
                   <linearGradient id="g" x1="0" x2="1">
-                    <stop offset="0" stop-color="#f59e0b"/>
-                    <stop offset="1" stop-color="#f97316"/>
+                    <stop offset="0" stop-color="#84C216"/>
+                    <stop offset="1" stop-color="#6DA10E"/>
                   </linearGradient>
                 </defs>
-                <rect rx="16" width="100%" height="100%" fill="#0f172a"/>
+                <rect rx="16" width="100%" height="100%" fill="#0F172A"/>
                 <g transform="translate(40 30)">
-                  <rect x="0" y="10" width="260" height="140" rx="12" fill="#071029" stroke="#f97316"/>
+                  <rect x="0" y="10" width="260" height="140" rx="12" fill="#071029" stroke="#6DA10E"/>
                   <circle cx="200" cy="180" r="60" fill="url(#g)" opacity="0.95"/>
-                  <rect x="20" y="30" width="120" height="12" rx="6" fill="#f97316" />
+                  <rect x="20" y="30" width="120" height="12" rx="6" fill="#6DA10E" />
                   <rect x="20" y="56" width="200" height="10" rx="5" fill="#ffffff22" />
                   <rect x="20" y="78" width="160" height="10" rx="5" fill="#ffffff22" />
                 </g>
@@ -109,14 +111,15 @@
                 <div id="managers" class="dashboard-panel reveal show" role="tabpanel">
                   <div class="panel-grid">
                     <div class="panel-main">
-                      <h3>Visión para gerentes y asesores</h3>
-                      <p>Herramientas para optimizar operación, reducir costos y convertir datos en decisiones accionables.</p>
+                      <h3 data-i18n="dashboard.managers.heading">Visión para gerentes y asesores</h3>
+                      <p data-i18n="dashboard.managers.desc">Herramientas para optimizar operación, reducir costos y convertir datos en decisiones accionables.</p>
                       <ul class="benefits">
-                        <li><strong>Dashboard central:</strong> aforo, uso de equipos y alertas en un solo lugar.</li>
-                        <li><strong>Reportes automatizados:</strong> exporta CSV y planifica acciones semanales.</li>
-                        <li><strong>Mantenimiento predictivo:</strong> reduce tiempos muertos con alertas de uso inusual.</li>
+                        <li><strong data-i18n="dashboard.managers.b1.title">Dashboard central:</strong> <span data-i18n="dashboard.managers.b1.desc">Aforo, uso de equipos y alertas en un solo lugar.</span></li>
+                        <li><strong data-i18n="dashboard.managers.b2.title">Reportes automatizados:</strong> <span data-i18n="dashboard.managers.b2.desc">Exporta CSV y planifica acciones semanales.</span></li>
+                        <li><strong data-i18n="dashboard.managers.b3.title">Mantenimiento predictivo:</strong> <span data-i18n="dashboard.managers.b3.desc">Reduce tiempos muertos con alertas de uso inusual.</span></li>
                       </ul>
-                      <br />
+                      </br>
+                    </br>
                       <a class="btn btn-primary" href="#contact" data-i18n="cta.requestDemo">Solicitar demo</a>
                     </div>
 
@@ -136,14 +139,16 @@
                 <div id="members" class="dashboard-panel reveal" role="tabpanel" hidden>
                   <div class="panel-grid">
                     <div class="panel-main">
-                      <h3>Visión para quien entrena</h3>
-                      <p>Una experiencia que te ayuda a medir, mejorar y disfrutar tu rutina con seguridad y gamificación.</p>
+                      <h3 data-i18n="dashboard.members.heading">Visión para quien entrena</h3>
+                      <p data-i18n="dashboard.members.desc">Una experiencia que te ayuda a medir, mejorar y disfrutar tu rutina con seguridad y gamificación.</p>
                       <ul class="benefits">
-                        <li><strong>Métricas personales:</strong> historial de visitas, calorías y progreso por entrenamiento.</li>
-                        <li><strong>Reservas y aforo:</strong> reserva máquinas o clases y evita horas pico.</li>
-                        <li><strong>Logros y retos:</strong> mantén la motivación con badges y retos mensuales.</li>
+                        <li><strong data-i18n="dashboard.members.b1.title">Métricas personales:</strong> <span data-i18n="dashboard.members.b1.desc">Historial de visitas, calorías y progreso por entrenamiento.</span></li>
+                        <li><strong data-i18n="dashboard.members.b2.title">Reservas y aforo:</strong> <span data-i18n="dashboard.members.b2.desc">Reserva máquinas o clases y evita horas pico.</span></li>
+                        <li><strong data-i18n="dashboard.members.b3.title">Logros y retos:</strong> <span data-i18n="dashboard.members.b3.desc">Mantén la motivación con badges y retos mensuales.</span></li>
                       </ul>
-                      <br />
+                    </br>
+                    </br>
+                    </br>
                       <a class="btn btn-primary" href="#contact" data-i18n="cta.wantApp">Quiero la app</a>
                     </div>
 
@@ -234,6 +239,8 @@
                   <li data-i18n="plans.basic.item3">Dashboard de ocupación en tiempo real</li>
                   <li data-i18n="plans.basic.item4">Soporte estándar por correo</li>
                 </ul>
+              </br>
+              </br>
                 <a class="btn btn-primary" href="#contact" data-i18n="cta.getStarted">Comenzar</a>
               </article>
         
@@ -247,6 +254,8 @@
                   <li data-i18n="plans.pro.item3">Reportes personalizados y exportación CSV</li>
                   <li data-i18n="plans.pro.item4">Soporte prioritario y onboarding guiado</li>
                 </ul>
+                </br>
+                </br>
                 <a class="btn btn-primary" href="#contact" data-i18n="cta.getStarted">Comenzar</a>
               </article>
             </div>
@@ -274,6 +283,8 @@
                   <li data-i18n="segments.mgrItem2">Reportes personalizables</li>
                   <li data-i18n="segments.mgrItem3">Instalación modular y soporte en español</li>
                 </ul>
+                </br>
+                    </br>
                 <a class="btn btn-small" href="#contact" data-i18n="cta.requestDemo">Solicitar demo</a>
               </div>
         
@@ -292,6 +303,9 @@
                   <li data-i18n="segments.memItem2">Alertas de uso seguro de equipos</li>
                   <li data-i18n="segments.memItem3">Gamificación y logros</li>
                 </ul>
+                </br>
+                    </br>
+                    </br>
                 <a class="btn btn-small" href="#contact" data-i18n="cta.wantApp">Quiero la app</a>
               </div>
         
@@ -446,7 +460,9 @@
               <li>Planifica mejor tu tiempo</li>
               <li>Comparte logros y compite sanamente</li>
             </ul>
+            
           </section>
+          
           <a class="btn btn-primary" href="#contact">Quiero la app</a>
         </div>
       </section>
